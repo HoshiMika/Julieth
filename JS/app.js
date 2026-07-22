@@ -281,7 +281,7 @@ function crearTarjetaRegalo(regalo){
         );
 
     }
-
+    console.log("APP.JS");
     return card;
 
 }

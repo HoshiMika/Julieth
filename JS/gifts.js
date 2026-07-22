@@ -623,6 +623,7 @@ function obtenerColorBadge(regalo) {
             CREAR TARJETA
 ======================================================*/
 
+console.log("GIFTS.JS");
 function crearTarjetaRegalo(regalo) {
 
     const disponibles = unidadesDisponibles(regalo);
