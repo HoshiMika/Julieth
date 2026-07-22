@@ -313,8 +313,6 @@ let invitadoActual = null;
 
 let regalosFiltrados = [...gifts];
 
-let reservas = [];
-
 /*=====================================================
                 FIN PARTE 1
 ======================================================*/
@@ -450,7 +448,7 @@ function estaDisponible(regalo) {
             ACTUALIZAR ESTADO
 ======================================================*/
 
-function actualizarEstado(regalo) {
+function actualizarEstadoGift(regalo) {
 
     regalo.disponible = estaDisponible(regalo);
 
@@ -466,7 +464,7 @@ function actualizarEstados() {
 
     gifts.forEach(regalo => {
 
-        actualizarEstado(regalo);
+        actualizarEstadoGift(regalo);
 
     });
 
@@ -731,7 +729,7 @@ function crearTarjetaRegalo(regalo) {
             RENDERIZAR REGALOS
 ======================================================*/
 
-function renderizarRegalos(lista = gifts) {
+function renderizarRegalosGift(lista = gifts) {
 
     actualizarEstados();
 
@@ -817,7 +815,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     actualizarEstados();
 
-    renderizarRegalos();
+    renderizarRegalosGift();
 
 });
 /*=====================================================
