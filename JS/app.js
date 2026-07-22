@@ -496,25 +496,19 @@ async function crearReserva(datos){
 
         }
 
-        const reserva={
+        const reserva = {
 
-            nombre:datos.nombre,
+    regalo: {
 
-            correo:datos.correo,
+        id: regalo.id,
 
-            telefono:datos.telefono,
+        nombre: regalo.nombre
 
-            regalo:{
+    },
 
-                id:regalo.id,
+    fecha: new Date().toISOString()
 
-                nombre:regalo.nombre
-
-            },
-
-            fecha:new Date().toISOString()
-
-        };
+};
 
         await FirebaseDB.guardarReserva(reserva);
 

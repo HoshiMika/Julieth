@@ -34,20 +34,13 @@ async function enviarCorreoReserva(reserva){
 
         const parametros = {
 
-            destino: EMAIL_CONFIG.DESTINO,
+    destino: EMAIL_CONFIG.DESTINO,
 
-            nombre: reserva.nombre,
+    regalo: reserva.regalo.nombre,
 
-            correo: reserva.correo,
+    fecha: new Date().toLocaleString("es-CO")
 
-            telefono: reserva.telefono,
-
-            regalo: reserva.regalo.nombre,
-
-            fecha: new Date().toLocaleString("es-CO")
-
-        };
-
+};
         const respuesta = await emailjs.send(
 
             EMAIL_CONFIG.SERVICE_ID,
