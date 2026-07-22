@@ -9,7 +9,7 @@
 
 let regalos = [...gifts];
 
-let regaloSeleccionado = null;
+window.regaloSeleccionado = null;
 
 let reservas = [];
 
@@ -146,7 +146,7 @@ async function enviarFormulario(e){
 
 function obtenerDatosFormulario(){
 
-    if(!regaloSeleccionado){
+    if(!window.regaloSeleccionado){
 
         mostrarMensaje(
 
@@ -168,7 +168,7 @@ function obtenerDatosFormulario(){
 
         telefono: inputTelefono.value.trim(),
 
-        regalo: regaloSeleccionado.id
+        regalo: window.regaloSeleccionado.id
 
     };
 

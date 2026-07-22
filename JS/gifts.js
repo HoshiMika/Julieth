@@ -308,7 +308,6 @@ const gifts = [
                 VARIABLES GLOBALES
 ======================================================*/
 
-let regaloSeleccionado = null;
 
 let invitadoActual = null;
 
@@ -837,7 +836,7 @@ function activarBotonesReserva() {
 
     botones.forEach(boton => {
 
-        boton.addEventListener("click", seleccionarRegalo);
+        boton.addEventListener("click", seleccionarRegaloGift);
 
     });
 
@@ -847,7 +846,7 @@ function activarBotonesReserva() {
             SELECCIONAR REGALO
 ======================================================*/
 
-function seleccionarRegalo(evento) {
+function seleccionarRegaloGift(evento) {
 
     const id = Number(evento.target.dataset.id);
 
@@ -869,7 +868,7 @@ function seleccionarRegalo(evento) {
 
     }
 
-    regaloSeleccionado = regalo;
+    window.regaloSeleccionado = regalo;
 
     document
         .querySelectorAll(".gift-item")
@@ -1033,13 +1032,13 @@ function reservarRegalo() {
             LIMPIAR
 ======================================================*/
 
-function limpiarFormulario() {
+function limpiarFormularioGift() {
 
     document
         .getElementById("giftForm")
         .reset();
 
-    regaloSeleccionado = null;
+    window.regaloSeleccionado = null;
 
 }
 
