@@ -1,3 +1,4 @@
+alert("ESTE ES MI APP.JS");
 /*=====================================================
                     APP.JS
         APARTA SHOWER - JULIETH
@@ -458,11 +459,11 @@ function validarFormulario(datos){
                 CREAR RESERVA
 ======================================================*/
 
-async function crearReserva(datos){
+async function crearReserva(datosFormulario){
 
-    if(!validarFormulario(datos)){
+    if(!validarFormulario(datosFormulario)){
 
-        return;
+        return true;
 
     }
 
@@ -482,7 +483,7 @@ async function crearReserva(datos){
 
         const regalo = regalos.find(
 
-            r=>r.id===datos.regalo
+            r=>r.id===datosFormulario.regalo
 
         );
 
