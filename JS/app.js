@@ -1,4 +1,3 @@
-alert("ESTE ES MI APP.JS");
 /*=====================================================
                     APP.JS
         APARTA SHOWER - JULIETH
