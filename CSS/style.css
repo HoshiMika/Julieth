@@ -331,16 +331,7 @@ input{
 
     position:relative;
 
-    background:
-    linear-gradient(
-        rgba(0,0,0,.45),
-        rgba(0,0,0,.45)
-    ),
-    #C8A97E;
-
-    display:flex;
-
-    align-items:center;
+    background:#C8A97E;
 
 }
 
